@@ -3,7 +3,17 @@ guid: bac14ec57dada564cbbe200b1b606f0f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: corn_plant_001__corn_texture_png_001
+    second: {fileID: 2100000, guid: 33b716d110b2b534883e132935ef7d4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: corn_plant__corn_texture_png
+    second: {fileID: 2100000, guid: e58ce8bdd25e56b4ba8f8c6c63150bf4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

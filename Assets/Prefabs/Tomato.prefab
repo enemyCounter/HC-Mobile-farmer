@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1095033501}
   - component: {fileID: 1095033500}
   m_Layer: 0
-  m_Name: Crop Particle
+  m_Name: Tomato Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1095033498}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3844019854842771041}
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _croprenderer: {fileID: 8923442921028228254}
-  _harvestParticles: {fileID: 0}
+  _harvestParticles: {fileID: 1095033501}
 --- !u!1001 &6393039853812807685
 PrefabInstance:
   m_ObjectHideFlags: 0
