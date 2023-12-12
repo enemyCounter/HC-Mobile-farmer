@@ -6,7 +6,7 @@
         },
         {
             "cropType": 1,
-            "amount": 9
+            "amount": 18
         }
     ]
 }
