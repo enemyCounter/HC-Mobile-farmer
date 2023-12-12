@@ -2,7 +2,11 @@
     "_items": [
         {
             "cropType": 0,
-            "amount": 36
+            "amount": 63
+        },
+        {
+            "cropType": 1,
+            "amount": 9
         }
     ]
 }
