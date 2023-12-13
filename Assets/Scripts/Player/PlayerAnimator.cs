@@ -12,17 +12,7 @@ public class PlayerAnimator : MonoBehaviour
 
     [Header (" Settings ")]
     [SerializeField] private float _moveSpeedMultiplier;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void ManageAnimations(Vector3 moveVector)
     {
@@ -41,7 +31,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void PlayRunAnimation()
     {
-        _animator.Play("Run");
+        _animator.Play("Movement");
     }
 
     private void PlayIdleAnimation()
