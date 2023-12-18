@@ -12,7 +12,7 @@ public class Crop : MonoBehaviour
 
     public void ScaleUp()
     {
-        _croprenderer.gameObject.LeanScale(_cornGrownSize, 1).setEase(LeanTweenType.easeInBack);
+        _croprenderer.gameObject.LeanScale(_cornGrownSize, 1).setEase(LeanTweenType.easeOutBounce);
     }
     
     public void ScaleDown()
