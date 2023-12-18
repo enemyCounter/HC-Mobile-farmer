@@ -31,7 +31,12 @@ public class Inventory
         _items.Add(new InventoryItem(cropType, 1));
     }
 
-    private void DebugInventory()
+    public InventoryItem[] GetInventoryItems()
+    {
+        return _items.ToArray();
+    }
+
+    public void DebugInventory()
     {
         foreach(InventoryItem item in _items)        
             Debug.Log("We have " + item.amount + " items in our " + item.cropType + " List");

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+[RequireComponent(typeof(InventoryDisplay))]
 public class InventoryManager : MonoBehaviour
 {
     private Inventory _inventory;
+    private InventoryDisplay _inventoryDisplay;
     private string _dataPath;
 
     // Start is called before the first frame update
@@ -13,9 +15,8 @@ public class InventoryManager : MonoBehaviour
     {
         _dataPath = Application.dataPath + "/inventoryData.txt";
 
-        //_inventory = new Inventory();
-
         LoadInventory();
+        ConfigureInventoryDisplay();
 
         CropTile.onCropHarvested += CropHarvestedCallback;
     }
@@ -23,6 +24,12 @@ public class InventoryManager : MonoBehaviour
     private void OnDestroy()
     {
         CropTile.onCropHarvested -= CropHarvestedCallback;
+    }
+
+    private void ConfigureInventoryDisplay()
+    {
+        _inventoryDisplay = GetComponent<InventoryDisplay>();
+        _inventoryDisplay.Configure(_inventory);
     }
 
     private void CropHarvestedCallback(CropType cropType)
