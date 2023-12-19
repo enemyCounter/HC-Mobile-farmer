@@ -34,7 +34,11 @@ public class InventoryManager : MonoBehaviour
 
     private void CropHarvestedCallback(CropType cropType)
     {
+        // Inventory update
         _inventory.CropHarvestCallback(cropType);
+
+        _inventoryDisplay.UpdateDisplay(_inventory);
+
         SaveInventory();
     }
 

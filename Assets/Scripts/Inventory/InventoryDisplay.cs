@@ -22,4 +22,29 @@ public class InventoryDisplay : MonoBehaviour
             cropContainerInstance.Configure(cropIcon, items[i].amount);
         }
     }
+
+    public void UpdateDisplay(Inventory inventory)
+    {
+        InventoryItem[] items = inventory.GetInventoryItems();
+
+        // Clear the crop containers parent
+        while(_cropContainerParent.childCount > 0)
+        {
+            Transform container = _cropContainerParent.GetChild(0);
+            container.SetParent(null);
+            Destroy(container.gameObject);
+        }
+       
+        // Create the UI containers from scratch again
+        Configure(inventory);
+
+        for(int i = 0;i < items.Length;i++)
+        {
+        UICropContainer cropContainerInstance = Instantiate(_uiCropContainerPrefab, _cropContainerParent);
+
+            Sprite cropIcon = DataManager.instance.GetCropIcon(items[i].cropType);
+
+            cropContainerInstance.Configure(cropIcon, items[i].amount);
+        }
+    }
 }
