@@ -36,6 +36,11 @@ public class Inventory
         return _items.ToArray();
     }
 
+    public void Clear()
+    {
+        _items.Clear();
+    }
+
     public void DebugInventory()
     {
         foreach(InventoryItem item in _items)        

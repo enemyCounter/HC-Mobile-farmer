@@ -42,6 +42,15 @@ public class InventoryManager : MonoBehaviour
         SaveInventory();
     }
 
+    [NaughtyAttributes.Button]
+    private void ClearInventory()
+    {
+        _inventory.Clear();
+        _inventoryDisplay.UpdateDisplay(_inventory);
+
+        SaveInventory();
+    }
+
     private void LoadInventory()
     {
         string data = "";
