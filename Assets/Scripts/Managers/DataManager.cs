@@ -27,4 +27,13 @@ public class DataManager : MonoBehaviour
         Debug.Log("No cropData found");
         return null;
     }
+
+    public int GetCropPriceFromCropType(CropType cropType)
+    {
+        for (int i = 0; i < _cropData.Length; i++)       
+            if (_cropData[i].cropType == cropType)
+                return _cropData[i].price;
+
+        return 0;
+    }
 }

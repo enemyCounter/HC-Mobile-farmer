@@ -22,7 +22,7 @@ public class Inventory
             }
         }
 
-        DebugInventory();
+        //DebugInventory();
 
         if(cropFound )        
             return;
